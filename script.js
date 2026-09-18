@@ -14,6 +14,7 @@ document.getElementById("calcular").addEventListener("click", function() {
   let planeta = document.getElementById("planeta").value.toLowerCase(); 
   let gravedad, radio, composicion, lunas, distancia;
 
+
   if (planeta === "mercurio") {
     gravedad = 0.38; radio = "4,879 km"; composicion = "Rocoso / Núcleo ferroso";
     lunas = "0"; distancia = "57.9 millones km";
