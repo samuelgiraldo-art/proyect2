@@ -1,6 +1,63 @@
-.nav{
+.style{
+  background-color: #091540;
+} 
+
+.text{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+  display:flex;
+  flex-direction: column;
+}
+
+.text1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+}
+
+#calculadora {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #0b1220;
+  padding: 20px;
+  border-radius: 10px;
+}
+#calculadora input,
+#calculadora select,
+#calculadora button {
+  width: 100%;
+}
+input, select, button {
+  width: 200px; 
+  display: block;
+  margin: left;
+}
+main{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  text-align: center
+  align-items: flex-start;
+  width: 90%;
+  margin: 0 auto;
+}
+section{
+  width: 45%;
+  background-color:#1B2CC1;
+  padding: 20px;
+  border-radius: 10px;
+}
+aside{
+  width: 40%;
+  background-color: #1B2CC1;
+  color:#ABD2FA;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#imagenPlaneta{
+  display: block;
+  margin: 10px auto;
+  border-radius: 80%;
+  box-shadow: 0 0 15px #000;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }

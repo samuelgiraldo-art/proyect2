@@ -1,5 +1,6 @@
-<!-- <!DOCTYPE html> -->
-<html lang="en">
+<!DOCTYPE html> 
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,46 @@
     <title> Document</title>
 </head>
     <nav>
-        <ul>
-            <li><a href="index.html">sistema solar activo</a></li>
-            <li>planeta tierra</li>
+        <ul class="text">
+            <li href="index.html">sistema solar activo</li>
+            <li> planeta tierra </li>
             <li>carta orbital</li>
             <li>pozos gravitatorios</li>
             <li>dilatacion temporal</li>
             <li>telemetria visual</li>
         </ul>
     </nav>
-<body>
-    <form>
-        <h1>Formulario</h1>
-        <input type="text" placeholder="nombre">
-        <input type="text" placeholder="apellido">
-        <input type="email" placeholder="correo">
-        <input type="number" placeholder="edad">
-        <input type="password" placeholder="contraseña">
-    </form>
-    
+<body class="style">
+  <main>
+    <section id="entrada">
+        <h1 class="text">Calculadora</h1>
+        <label for="peso">Tu peso en la tierra (kg): </label>
+        <input type="number" id="peso" placeholder="ej.80">
+        <label for="planeta">Selecciona planeta</label>
+        <select id="planeta">
+          <option value="Mercurio">Mercurio (0.38)</option>
+          <option value="Venus">Venus (0.91)</option>
+          <option value="Marte">Marte (0.38)</option>
+          <option value="Júpiter">Júpiter (2.53)</option>
+          <option value="Saturno">Saturno (1.06)</option>
+          <option value="Urano">Urano (0.89)</option>
+          <option value="Neptuno">Neptuno (1.14)</option>
+        </select>
+        <button id="calcular" type="button">Calcular</button>
+        </section>
+    <aside id="resultado">
+      <h3 id="nombrePlaneta" src=""alt="image"></h3>
+      <img id="imagenPlaneta" src="" alt="planeta" width="200"> 
+      <!-- <img id="imagenPlaneta" src="jupiter.webp" alt="imagen del planeta" width="200">
+      <img id="imagenPlaneta" src="marte.webp" alt="imagen del planeta" width="200">
+      <img id="imagenPlaneta" src="saturno.webp" alt="imagen del planeta" width="200">
+      <img id="imagenPlaneta" src="planeta-tierra.webp" alt="imagen del planeta" width="200"> 
+      <img id="imagenPlaneta" src="urano.webp" alt="imagen del planeta" width="200"> -->
+      <p id="pesoFinal"></p> 
+      <p id="infoPlaneta"></p>
+    </aside>
+  </main>
+<script src="script.js"></script>
 </body>
 
 </html>
