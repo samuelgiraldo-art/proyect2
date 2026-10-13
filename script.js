@@ -122,11 +122,12 @@ document.getElementById("calcular").addEventListener("click", function () {
 
   if (isNaN(pesoTierra) || pesoTierra <= 0) {
     alert(translations[idiomaActual].errorPeso);
+    return;
   }
 
   ultimoResultado = { planeta, pesoTierra };
   mostrarResultado();
-})
+});
 
 // Botones de idioma
 document.querySelectorAll(".lang-button").forEach(btn => {
