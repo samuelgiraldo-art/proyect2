@@ -126,7 +126,7 @@ document.getElementById("calcular").addEventListener("click", function () {
 
   ultimoResultado = { planeta, pesoTierra };
   mostrarResultado();
-});
+})
 
 // Botones de idioma
 document.querySelectorAll(".lang-button").forEach(btn => {
