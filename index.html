@@ -1,53 +1,56 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title> Document</title>
+    <title data-i18n="titulo">sistema</title>
 </head>
-    <nav>
-        <ul class="text">
-            <li href="index.html">sistema solar activo</li>
-            <li> planeta tierra </li>
-            <li>carta orbital</li>
-            <li>pozos gravitatorios</li>
-            <li>dilatacion temporal</li>
-            <li>telemetria visual</li>
-        </ul>
-    </nav>
 <body class="style">
+  <nav>
+    <ul class="text" id="section-es">
+      <li><a href="index.html" data-i18n="nav1">sistema solar activo</a></li>
+      <li data-i18n="nav2">planeta tierra</li>
+      <li data-i18n="nav3">carta orbital</li>
+      <li data-i18n="nav4">pozos gravitatorios</li>
+      <li data-i18n="nav5">dilatacion temporal</li>
+      <li data-i18n="nav6">telemetria visual</li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="languages">
+      <button class="lang-button" data-language="en"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbitbAIbuhhmeYMl4uyQb_cnRAujLu3hAhMpavYXJ7sg&s=10" alt="uk" width="20"></button>
+      <button class="lang-button" data-language="es"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLJwVyAZURxCasBpYJYxKDt_ON00QUnKJiqAfxcfZjwA&s=10" alt="Spain" width="20"></button>
+    </div>
+  </header>
+
   <main>
     <section id="entrada">
-        <h1 class="text">Calculadora</h1>
-        <label for="peso">Tu peso en la tierra (kg): </label>
-        <input type="number" id="peso" placeholder="ej.80">
-        <label for="planeta">Selecciona planeta</label>
-        <select id="planeta">
-          <option value="Mercurio">Mercurio (0.38)</option>
-          <option value="Venus">Venus (0.91)</option>
-          <option value="Marte">Marte (0.38)</option>
-          <option value="Júpiter">Júpiter (2.53)</option>
-          <option value="Saturno">Saturno (1.06)</option>
-          <option value="Urano">Urano (0.89)</option>
-          <option value="Neptuno">Neptuno (1.14)</option>
-        </select>
-        <button id="calcular" type="button">Calcular</button>
-        </section>
+      <h1 class="text" data-i18n="calculadora">Calculadora</h1>
+      <label for="peso" data-i18n="labelPeso">Tu peso en la tierra (kg): </label>
+      <input type="number" id="peso" data-i18n-placeholder="placeholderPeso" placeholder="ej.80">
+      <label for="planeta" data-i18n="labelPlaneta">Selecciona planeta</label>
+      <select id="planeta">
+        <option value="mercurio">Mercurio (0.38)</option>
+        <option value="venus">Venus (0.91)</option>
+        <option value="marte">Marte (0.38)</option>
+        <option value="jupiter">Júpiter (2.53)</option>
+        <option value="saturno">Saturno (1.06)</option>
+        <option value="urano">Urano (0.89)</option>
+        <option value="neptuno">Neptuno (1.14)</option>
+      </select>
+      <button id="calcular" type="button" data-i18n="calcular">Calcular</button>
+    </section>
+
     <aside id="resultado">
-      <h3 id="nombrePlaneta" src=""alt="image"></h3>
-      <img id="imagenPlaneta" src="" alt="planeta" width="200"> 
-      <!-- <img id="imagenPlaneta" src="jupiter.webp" alt="imagen del planeta" width="200">
-      <img id="imagenPlaneta" src="marte.webp" alt="imagen del planeta" width="200">
-      <img id="imagenPlaneta" src="saturno.webp" alt="imagen del planeta" width="200">
-      <img id="imagenPlaneta" src="planeta-tierra.webp" alt="imagen del planeta" width="200"> 
-      <img id="imagenPlaneta" src="urano.webp" alt="imagen del planeta" width="200"> -->
-      <p id="pesoFinal"></p> 
+      <h3 id="nombrePlaneta"></h3>
+      <img id="imagenPlaneta" src="" alt="planeta" width="200">
+      <p id="pesoFinal"></p>
       <p id="infoPlaneta"></p>
     </aside>
   </main>
-<script src="script.js"></script>
-</body>
 
+  <script src="script.js"></script>
+</body>
 </html>
