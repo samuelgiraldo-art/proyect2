@@ -1,15 +1,14 @@
-
 const images = {
-    mercurio:"img/mercurio.webp",
-    marte:"img/marte.webp",
-    jupiter:"img/jupiter.webp",
-    neptuno:"img/neptuno.webp",
-    tierra:"img/planeta-tierra.webp",
-    venus:"img/venus.webp",
-    urano:"img/urano.webp",
-    saturno:"img/saturno.webp",
+  mercurio: "img/mercurio.webp",
+  venus: "img/venus.webp",
+  marte: "img/marte.webp",
+  jupiter: "img/jupiter.webp",
+  saturno: "img/saturno.webp",
+  urano: "img/urano.webp",
+  neptuno: "img/neptuno.webp",
 };
 
+// Textos de la interfaz
 const translations = {
   es: {
     titulo: "sistema",
@@ -55,6 +54,7 @@ const translations = {
   },
 };
 
+// Datos de los planetas (con nombre y composición en cada idioma)
 const planetas = {
   mercurio: { nombre: { es: "Mercurio", en: "Mercury" }, gravedad: 0.38, radio: "4,879 km",
     composicion: { es: "Rocoso / Núcleo ferroso", en: "Rocky / Iron core" }, lunas: 0, distancia: "57.9" },
@@ -81,20 +81,24 @@ function aplicarIdioma(lang) {
   document.documentElement.lang = lang;
   const t = translations[lang];
 
+  // Textos
   document.querySelectorAll("[data-i18n]").forEach(el => {
     el.textContent = t[el.dataset.i18n];
   });
 
-   document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+  // Placeholders
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
     el.placeholder = t[el.dataset.i18nPlaceholder];
   });
 
+  // Opciones del select
   document.querySelectorAll("#planeta option").forEach(opt => {
     const p = planetas[opt.value];
     opt.textContent = `${p.nombre[lang]} (${p.gravedad})`;
   });
 
-   if (ultimoResultado) mostrarResultado();
+  // Si ya había un resultado, lo volvemos a mostrar traducido
+  if (ultimoResultado) mostrarResultado();
 }
 
 function mostrarResultado() {
@@ -111,7 +115,7 @@ function mostrarResultado() {
   document.getElementById("imagenPlaneta").src = images[planeta];
 }
 
-
+// Botón calcular
 document.getElementById("calcular").addEventListener("click", function () {
   const pesoTierra = parseFloat(document.getElementById("peso").value);
   const planeta = document.getElementById("planeta").value;
@@ -119,14 +123,16 @@ document.getElementById("calcular").addEventListener("click", function () {
   if (isNaN(pesoTierra) || pesoTierra <= 0) {
     alert(translations[idiomaActual].errorPeso);
     return;
+  }
 
   ultimoResultado = { planeta, pesoTierra };
   mostrarResultado();
 });
 
+// Botones de idioma
 document.querySelectorAll(".lang-button").forEach(btn => {
   btn.addEventListener("click", () => aplicarIdioma(btn.dataset.language));
 });
 
+// Idioma inicial
 aplicarIdioma(idiomaActual);
-
